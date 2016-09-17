@@ -7,4 +7,3 @@
 void Navigation::init() {
 
 }
-
