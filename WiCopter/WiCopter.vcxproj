@@ -83,12 +83,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MPU9265.h" />
-    <ClInclude Include="Navigation.h" />
+    <ClInclude Include="FlightController.h" />
     <ClInclude Include="__vm\.WiCopter.vsarduino.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MPU9265.cpp" />
-    <ClCompile Include="Navigation.cpp" />
+    <ClCompile Include="FlightController.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
