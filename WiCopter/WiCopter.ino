@@ -7,16 +7,16 @@
 // the setup function runs once when you press reset or power the board
 #include <SPI.h>
 #include <Wire.h>
-#include "Navigation.h"
-Navigation navigation;
+#include "FlightController.h"
+FlightController fc;
 
 void setup() {
-	navigation.init();
+	fc.init();
 	
-
 }
 
 // the loop function runs over and over again until power down or reset
 void loop() {
-  
+	fc.update();
+
 }

@@ -9,13 +9,14 @@
 	#include "WProgram.h"
 #endif
 
-class Navigation
+class FlightController
 {
  protected:
 
 
  public:
 	void init();
+	void update();
 };
 
 #endif

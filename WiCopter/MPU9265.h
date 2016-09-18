@@ -15,7 +15,9 @@ class MPU9265Class {
 
  public:
 	void init();
-	void MpuUpdate();
+	void update();
+
+	float pitch, yaw, roll;
 };
 
 #endif
