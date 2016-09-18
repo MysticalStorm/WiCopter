@@ -5,6 +5,7 @@
 */
 
 // the setup function runs once when you press reset or power the board
+#include <Servo.h>
 #include <SPI.h>
 #include <Wire.h>
 #include "FlightController.h"
@@ -12,11 +13,9 @@ FlightController fc;
 
 void setup() {
 	fc.init();
-	
 }
 
 // the loop function runs over and over again until power down or reset
 void loop() {
 	fc.update();
-
 }

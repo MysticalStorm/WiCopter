@@ -47,7 +47,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Program Files\Arduino\hardware\arduino\avr\libraries\SPI\src;C:\Program Files\Arduino\hardware\arduino\avr\libraries\Wire\src;C:\Program Files\Arduino\hardware\arduino\avr\libraries\SPI\src\utility;C:\Program Files\Arduino\hardware\arduino\avr\libraries\Wire\src\utility;C:\Program Files\Arduino\libraries;C:\Program Files\Arduino\hardware\arduino\avr\libraries;C:\Users\quadro\Documents\Arduino\libraries;C:\Program Files\Arduino\hardware\arduino\avr\cores\arduino;C:\Program Files\Arduino\hardware\arduino\avr\variants\eightanaloginputs;C:\Users\quadro\documents\visual studio 2015\Projects\WiCopter\WiCopter;C:\Program Files\Arduino\hardware\arduino\avr\cores\arduino;C:\Program Files\Arduino\hardware\arduino\avr\variants\eightanaloginputs;C:\Program Files\Arduino\hardware\arduino\avr\libraries\SPI\src;C:\Program Files\Arduino\hardware\arduino\avr\libraries\Wire\src;C:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\qww1cbf5.wi0\Micro Platforms\default\debuggers\VM_DBG;C:\Program Files\Arduino\libraries;C:\Program Files\Arduino\hardware\arduino\avr\libraries;C:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\qww1cbf5.wi0\Micro Platforms\default\debuggers;C:\Users\quadro\Documents\Arduino\libraries;C:\Program Files\Arduino\hardware\tools\avr/avr/include/;C:\Program Files\Arduino\hardware\tools\avr//avr/include/avr/;C:\Program Files\Arduino\hardware\tools\avr/lib\gcc\avr\4.8.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Program Files\Arduino\hardware\arduino\avr\libraries\SPI\src;C:\Program Files\Arduino\hardware\arduino\avr\libraries\Wire\src;C:\Program Files\Arduino\hardware\arduino\avr\libraries\SPI\src\utility;C:\Program Files\Arduino\hardware\arduino\avr\libraries\Wire\src\utility;C:\Program Files\Arduino\libraries;C:\Program Files\Arduino\hardware\arduino\avr\libraries;C:\Users\quadro\Documents\Arduino\libraries;C:\Program Files\Arduino\hardware\arduino\avr\cores\arduino;C:\Program Files\Arduino\hardware\arduino\avr\variants\eightanaloginputs;C:\Users\quadro\documents\visual studio 2015\Projects\WiCopter\WiCopter;C:\Program Files\Arduino\hardware\tools\avr/avr/include/;C:\Program Files\Arduino\hardware\tools\avr//avr/include/avr/;C:\Program Files\Arduino\hardware\tools\avr/lib\gcc\avr\4.8.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>c:\Users\quadro\documents\visual studio 2015\Projects\WiCopter\WiCopter\__vm\.WiCopter.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <IgnoreStandardIncludePath>false</IgnoreStandardIncludePath>
       <PreprocessorDefinitions>__AVR_ATmega328p__;__AVR_ATmega328P__;_VMDEBUG=1;F_CPU=16000000L;ARDUINO=106011;ARDUINO_AVR_NANO;ARDUINO_ARCH_AVR;__cplusplus=201103L;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -82,11 +82,15 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Motor.h" />
+    <ClInclude Include="MotorsController.h" />
     <ClInclude Include="MPU9265.h" />
     <ClInclude Include="FlightController.h" />
     <ClInclude Include="__vm\.WiCopter.vsarduino.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Motor.cpp" />
+    <ClCompile Include="MotorsController.cpp" />
     <ClCompile Include="MPU9265.cpp" />
     <ClCompile Include="FlightController.cpp" />
   </ItemGroup>
