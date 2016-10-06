@@ -5,6 +5,7 @@
 */
 
 // the setup function runs once when you press reset or power the board
+#include "FlightStabilization.h"
 #include <Servo.h>
 #include <SPI.h>
 #include <Wire.h>
@@ -12,6 +13,8 @@
 FlightController fc;
 
 void setup() {
+	Serial.begin(9600);
+
 	fc.init();
 }
 

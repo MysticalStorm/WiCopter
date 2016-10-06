@@ -3,19 +3,16 @@
 // 
 
 #include "FlightController.h"
+#include "MotorsController.h"
 #include "MPU9265.h"
 
-MPU9265Class mpu;
+MotorsController mc;
 
 void FlightController::init() {
-	mpu.init();
+	mc.init();
 }
 
 void FlightController::update() {
-	mpu.update();
 
-	// Update flight orientation
-	pitch = mpu.pitch;
-	roll  = mpu.roll;
-	yaw   = mpu.yaw;
+	mc.update();
 }

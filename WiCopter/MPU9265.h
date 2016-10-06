@@ -9,15 +9,20 @@
 	#include "WProgram.h"
 #endif
 
+struct Orientation
+{
+	float pitch;
+	float yaw;
+	float roll;
+};
+
 class MPU9265Class {
  protected:
-
 
  public:
 	void init();
 	void update();
-
-	float pitch, yaw, roll;
+	Orientation orientation;
 };
 
 #endif

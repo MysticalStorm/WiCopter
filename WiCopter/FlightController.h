@@ -19,8 +19,6 @@ class FlightController
  public:
 	void init();
 	void update();
-
-	float pitch, roll, yaw;
 };
 
 #endif

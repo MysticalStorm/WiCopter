@@ -1,18 +1,18 @@
-C:\Users\quadro\AppData\Local\Temp\VMicroBuilds\WiCopter\nano_atmega328\MotorsController.cpp.o: \
- C:\Users\quadro\AppData\Local\Temp\VMicroBuilds\WiCopter\nano_atmega328\MotorsController.cpp \
- C:\Users\quadro\AppData\Local\Temp\VMicroBuilds\WiCopter\nano_atmega328\MotorsController.h \
- C:\Program\ Files\Arduino\hardware\arduino\avr\cores\arduino/arduino.h \
- C:\Program\ Files\Arduino\hardware\arduino\avr\cores\arduino/binary.h \
- C:\Program\ Files\Arduino\hardware\arduino\avr\cores\arduino/WCharacter.h \
- C:\Program\ Files\Arduino\hardware\arduino\avr\cores\arduino/WString.h \
- C:\Program\ Files\Arduino\hardware\arduino\avr\cores\arduino/HardwareSerial.h \
- C:\Program\ Files\Arduino\hardware\arduino\avr\cores\arduino/Stream.h \
- C:\Program\ Files\Arduino\hardware\arduino\avr\cores\arduino/Print.h \
- C:\Program\ Files\Arduino\hardware\arduino\avr\cores\arduino/Printable.h \
- C:\Program\ Files\Arduino\hardware\arduino\avr\cores\arduino/USBAPI.h \
- C:\Program\ Files\Arduino\hardware\arduino\avr\cores\arduino/Arduino.h \
- C:\Program\ Files\Arduino\hardware\arduino\avr\variants\eightanaloginputs/pins_arduino.h \
- C:\Program\ Files\Arduino\hardware\arduino\avr\variants\eightanaloginputs/../standard/pins_arduino.h \
- C:\Users\quadro\AppData\Local\Temp\VMicroBuilds\WiCopter\nano_atmega328\Motor.h \
- C:\Program\ Files\Arduino\libraries\Servo\src/Servo.h \
- C:\Program\ Files\Arduino\libraries\Servo\src/avr/ServoTimers.h
+C:\Users\vlad\AppData\Local\Temp\VMicroBuilds\WiCopter\nano_atmega328\MotorsController.cpp.o: \
+ C:\Users\vlad\AppData\Local\Temp\VMicroBuilds\WiCopter\nano_atmega328\MotorsController.cpp \
+ C:\Users\vlad\AppData\Local\Temp\VMicroBuilds\WiCopter\nano_atmega328\MotorsController.h \
+ E:\Arduino\hardware\arduino\avr\cores\arduino/arduino.h \
+ E:\Arduino\hardware\arduino\avr\cores\arduino/binary.h \
+ E:\Arduino\hardware\arduino\avr\cores\arduino/WCharacter.h \
+ E:\Arduino\hardware\arduino\avr\cores\arduino/WString.h \
+ E:\Arduino\hardware\arduino\avr\cores\arduino/HardwareSerial.h \
+ E:\Arduino\hardware\arduino\avr\cores\arduino/Stream.h \
+ E:\Arduino\hardware\arduino\avr\cores\arduino/Print.h \
+ E:\Arduino\hardware\arduino\avr\cores\arduino/Printable.h \
+ E:\Arduino\hardware\arduino\avr\cores\arduino/USBAPI.h \
+ E:\Arduino\hardware\arduino\avr\cores\arduino/Arduino.h \
+ E:\Arduino\hardware\arduino\avr\variants\eightanaloginputs/pins_arduino.h \
+ E:\Arduino\hardware\arduino\avr\variants\eightanaloginputs/../standard/pins_arduino.h \
+ C:\Users\vlad\AppData\Local\Temp\VMicroBuilds\WiCopter\nano_atmega328\Motor.h \
+ E:\Arduino\libraries\Servo\src/Servo.h \
+ E:\Arduino\libraries\Servo\src/avr/ServoTimers.h

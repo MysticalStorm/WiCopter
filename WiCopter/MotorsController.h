@@ -9,17 +9,17 @@
 	#include "WProgram.h"
 #endif
 #include "Motor.h"
+#include "FlightStabilization.h"
 
 class MotorsController {
  private:
-	 MotorsController();
+	 FlightStabilizationClass FS;
 
  public:
-	 Motor *motors = new Motor[4];
+	 Motor motors[4];
 
 	 void init();
 	 void update();
-	 void addMotor(Motor motor);
 };
 
 

@@ -236,6 +236,10 @@ float ax, ay, az, gx, gy, gz, mx, my, mz; // variables to hold latest sensor dat
 float q[4] = { 1.0f, 0.0f, 0.0f, 0.0f };    // vector to hold quaternion
 float eInt[3] = { 0.0f, 0.0f, 0.0f };       // vector to hold integral error for Mahony method
 
+float roll;
+float pitch;
+float yaw;
+
 
 //===================================================================================================================
 //====== Set of useful function to access acceleration. gyroscope, magnetometer, and temperature data
@@ -896,6 +900,7 @@ void MPU9265Class::init() {
 			Serial.print("Y-Axis sensitivity adjustment value "); Serial.println(magCalibration[1], 2);
 			Serial.print("Z-Axis sensitivity adjustment value "); Serial.println(magCalibration[2], 2);
 		}
+		
 		delay(1000);
 	}
 	else
@@ -1034,6 +1039,10 @@ void MPU9265Class::update() {
 
 				Serial.print("rate = "); Serial.print((float)sumCount / sum, 2); Serial.println(" Hz");
 			}
+
+			orientation.roll = roll;
+			orientation.pitch = pitch;
+			orientation.yaw = yaw;
 
 			count = millis();
 			sumCount = 0;

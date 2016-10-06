@@ -21,14 +21,18 @@ enum LocationType {
 class Motor {
 
  private:
+	 // Vars
 	 Servo motor;
 
+	 // Methods
+	 String stringLocation();
+
  public:
-	 int speed;
+	 unsigned short int speed;
 	 LocationType location;
 		
 	 Motor();
-	 Motor(signed char pin, LocationType location);
+	 Motor(unsigned char pin, LocationType location);
 	 void update();
 };
 
