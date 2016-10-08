@@ -7,24 +7,24 @@
 Motor::Motor() {}
 
 Motor::Motor(unsigned char pin, LocationType loc) {
+	// Speed default values
 	speed = 0;
+	maxSpeed = 0;
+	minSpeed = 0;
+
+	// Location
 	location = loc;
 
+	// Servo atach
 	motor.attach(pin);
-
-	// MARK: Debug log
-	String output = stringLocation() += " - pin: ";
-	output += pin;
-	Serial.println(output);
 }
 
 void Motor::update() {
-	motor.writeMicroseconds(speed);
+	if (!active) {
+		return;
+	}
 
-	// MARK: Debug log
-	String output = stringLocation() += " = ";
-	output += speed;
-	Serial.println(output);
+	motor.writeMicroseconds(speed);
 }
 
 String Motor::stringLocation() {

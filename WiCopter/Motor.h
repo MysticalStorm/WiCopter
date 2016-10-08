@@ -24,16 +24,18 @@ class Motor {
 	 // Vars
 	 Servo motor;
 
-	 // Methods
-	 String stringLocation();
-
  public:
+	 bool active = false;
 	 unsigned short int speed;
+	 unsigned short int maxSpeed;
+	 unsigned short int minSpeed;
 	 LocationType location;
 		
 	 Motor();
 	 Motor(unsigned char pin, LocationType location);
 	 void update();
+
+	 String stringLocation();
 };
 
 #endif

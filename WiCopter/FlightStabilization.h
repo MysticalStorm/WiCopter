@@ -10,11 +10,10 @@
 #endif
 #include "Motor.h"
 
-class FlightStabilizationClass
-{
+class FlightStabilizationClass {
  public:
 	 bool enabled = true;
-	 int throttle = 0;
+	 int throttle = 1000;
 
 	 void init();
 	 void update();
