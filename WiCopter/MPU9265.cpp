@@ -198,7 +198,7 @@ uint8_t Mmode = 0x02;         // 2 for 8 Hz, 6 for 100 Hz continuous magnetomete
 float aRes, gRes, mRes;      // scale resolutions per LSB for the sensors
 
 				  // Pin definitions
-int intPin = 2;  // These can be changed, 2 and 3 are the Arduinos ext int pins
+int intPin = 2; //D2  // These can be changed, 2 and 3 are the Arduinos ext int pins
 
 int16_t accelCount[3];	  // Stores the 16-bit signed accelerometer sensor output
 int16_t gyroCount[3];    // Stores the 16-bit signed gyro sensor output
@@ -859,7 +859,8 @@ void MahonyQuaternionUpdate(float ax, float ay, float az, float gx, float gy, fl
 }
 
 void MPU9265Class::init() {
-	Wire.begin();
+	Wire.begin(); //A5 A4
+
 	// Set up the interrupt pin, its set as active high, push-pull
 	pinMode(intPin, INPUT);
 	digitalWrite(intPin, LOW);
