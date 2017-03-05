@@ -19,7 +19,7 @@ void MotorsController::update() {
 	for (char i = 0; i < 4; i++) {
 		Motor m = motors[i];
 		m.speed = FS.speedForMotor(m);
-		Serial.println( m.stringLocation() + " - " + m.speed);
+		//Serial.println( m.stringLocation() + " - " + m.speed);
 		m.update();
 	}
 }

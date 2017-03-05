@@ -6,6 +6,10 @@
 #include <SPI.h>
 #include <Wire.h>
 
+#include "i2c.h"
+#include "i2c_BMP280.h"
+
+
 // See also MPU-9250 Register Map and Descriptions, Revision 4.0, RM-MPU-9250A-00, Rev. 1.4, 9/9/2013 for registers not listed in
 // above document; the MPU9250 and MPU9150 are virtually identical but the latter has a different register map
 //
@@ -239,6 +243,8 @@ float eInt[3] = { 0.0f, 0.0f, 0.0f };       // vector to hold integral error for
 float roll;
 float pitch;
 float yaw;
+
+BMP280 bmp280;
 
 
 //===================================================================================================================
@@ -903,6 +909,18 @@ void MPU9265Class::init() {
 		}
 		
 		delay(1000);
+
+		Serial.print("Probe BMP280: ");
+		if (bmp280.initialize()) Serial.println("Sensor found");
+		else
+		{
+			Serial.println("Sensor missing");
+			while (1) {}
+		}
+
+		// onetime-measure:
+		bmp280.setEnabled(0);
+		bmp280.triggerMeasurement();
 	}
 	else
 	{
@@ -1039,6 +1057,32 @@ void MPU9265Class::update() {
 				Serial.println(roll, 2);
 
 				Serial.print("rate = "); Serial.print((float)sumCount / sum, 2); Serial.println(" Hz");
+			}
+
+			//bmp280.awaitMeasurement();
+
+			if (bmp280.checkMeasurement() == 1) {
+				float temperature;
+				bmp280.getTemperature(temperature);
+
+				float pascal;
+				bmp280.getPressure(pascal);
+
+				static float meters, metersold;
+				bmp280.getAltitude(meters);
+				metersold = (metersold * 10 + meters) / 11;
+
+				bmp280.triggerMeasurement();
+
+				Serial.print(" HeightPT1: ");
+				Serial.print(metersold);
+				Serial.print(" m; Height: ");
+				Serial.print(meters);
+				Serial.print(" Pressure: ");
+				Serial.print(pascal);
+				Serial.print(" Pa; T: ");
+				Serial.print(temperature);
+				Serial.println(" C");
 			}
 
 			orientation.roll = roll;
