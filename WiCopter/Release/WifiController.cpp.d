@@ -1,5 +1,6 @@
-C:\Users\incro\AppData\Local\Temp\VMBuilds\WiCopter\nano_atmega328\Release\WiCopter.cpp.o: \
- C:\Users\incro\AppData\Local\Temp\VMBuilds\WiCopter\nano_atmega328\Release\WiCopter.cpp \
+C:\Users\incro\AppData\Local\Temp\VMBuilds\WiCopter\nano_atmega328\Release\WifiController.cpp.o: \
+ C:\Users\incro\AppData\Local\Temp\VMBuilds\WiCopter\nano_atmega328\Release\WifiController.cpp \
+ C:\Users\incro\AppData\Local\Temp\VMBuilds\WiCopter\nano_atmega328\Release\WifiController.h \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino/arduino.h \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino/binary.h \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino/WCharacter.h \
@@ -12,14 +13,5 @@ C:\Users\incro\AppData\Local\Temp\VMBuilds\WiCopter\nano_atmega328\Release\WiCop
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino/Arduino.h \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\variants\eightanaloginputs/pins_arduino.h \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\variants\eightanaloginputs/../standard/pins_arduino.h \
- C:\Users\incro\AppData\Local\Temp\VMBuilds\WiCopter\nano_atmega328\Release\WifiController.h \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\libraries\SoftwareSerial\src/SoftwareSerial.h \
- C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino/Stream.h \
- C:\Users\incro\AppData\Local\Temp\VMBuilds\WiCopter\nano_atmega328\Release\FlightStabilization.h \
- C:\Users\incro\AppData\Local\Temp\VMBuilds\WiCopter\nano_atmega328\Release\Motor.h \
- C:\Program\ Files\ (x86)\Arduino\libraries\Servo\src/Servo.h \
- C:\Program\ Files\ (x86)\Arduino\libraries\Servo\src/avr/ServoTimers.h \
- C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\libraries\SPI\src/SPI.h \
- C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino/Arduino.h \
- C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\libraries\Wire\src/Wire.h \
- C:\Users\incro\AppData\Local\Temp\VMBuilds\WiCopter\nano_atmega328\Release\FlightController.h
+ C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino/Stream.h

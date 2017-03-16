@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\BMP280">
+      <UniqueIdentifier>{ad13b4e4-3d23-4bcb-9dc7-8c72c7935b43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\BMP280">
+      <UniqueIdentifier>{3d58572b-c6eb-49cb-89b0-341d50a60cb4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="WiCopter.ino" />
@@ -33,6 +39,12 @@
     <ClCompile Include="FlightStabilization.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="i2c.cpp">
+      <Filter>Source Files\BMP280</Filter>
+    </ClCompile>
+    <ClCompile Include="WifiController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="__vm\.WiCopter.vsarduino.h">
@@ -51,6 +63,18 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="FlightStabilization.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="i2c.h">
+      <Filter>Header Files\BMP280</Filter>
+    </ClInclude>
+    <ClInclude Include="i2c_BMP280.h">
+      <Filter>Header Files\BMP280</Filter>
+    </ClInclude>
+    <ClInclude Include="i2c_Sensor.h">
+      <Filter>Header Files\BMP280</Filter>
+    </ClInclude>
+    <ClInclude Include="WifiController.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -14,6 +14,9 @@ struct Orientation
 	float pitch;
 	float yaw;
 	float roll;
+	float height;
+	float pressure;
+	float temperature;
 };
 
 class MPU9265Class {

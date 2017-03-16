@@ -161,7 +161,7 @@
 
 // Using the MSENSR-9250 breakout board, ADO is set to 0
 // Seven-bit device address is 110100 for ADO = 0 and 110101 for ADO = 1
-#define ADO 0
+#define ADO false
 #if ADO
 #define MPU9250_ADDRESS 0x69  // Device address when ADO = 1
 #else
@@ -169,7 +169,7 @@
 #define AK8963_ADDRESS 0x0C   //  Address of magnetometer
 #endif
 
-#define Madgwick 0
+#define Madgwick false
 
 #define AHRS true         // set to false for basic data read
 #define SerialDebug false   // set to true to get Serial output for debugging
@@ -245,7 +245,6 @@ float pitch;
 float yaw;
 
 BMP280 bmp280;
-
 
 //===================================================================================================================
 //====== Set of useful function to access acceleration. gyroscope, magnetometer, and temperature data
@@ -866,7 +865,7 @@ void MahonyQuaternionUpdate(float ax, float ay, float az, float gx, float gy, fl
 
 void MPU9265Class::init() {
 	Wire.begin(); //A5 A4
-
+	orientation.height = 0.0;
 	// Set up the interrupt pin, its set as active high, push-pull
 	pinMode(intPin, INPUT);
 	digitalWrite(intPin, LOW);
@@ -874,7 +873,7 @@ void MPU9265Class::init() {
 	// Read the WHO_AM_I register, this is a good test of communication
 	byte c = readByte(MPU9250_ADDRESS, WHO_AM_I_MPU9250);  // Read WHO_AM_I register for MPU-9250
 	Serial.print("MPU9250 "); Serial.print("I AM "); Serial.print(c, HEX); Serial.print(" I should be "); Serial.println(0x71, HEX);
-	delay(1000);
+	delay(100);
 
 	if (c == 0x71) // WHO_AM_I should always be 0x68
 	{
@@ -896,7 +895,7 @@ void MPU9265Class::init() {
 																		// Read the WHO_AM_I register of the magnetometer, this is a good test of communication
 		byte d = readByte(AK8963_ADDRESS, WHO_AM_I_AK8963);  // Read WHO_AM_I register for AK8963
 		Serial.print("AK8963 "); Serial.print("I AM "); Serial.print(d, HEX); Serial.print(" I should be "); Serial.println(0x48, HEX);
-		delay(1000);
+		delay(100);
 
 		// Get magnetometer calibration from AK8963 ROM
 		initAK8963(magCalibration); Serial.println("AK8963 initialized for active data mode...."); // Initialize device for active mode read of magnetometer
@@ -908,7 +907,7 @@ void MPU9265Class::init() {
 			Serial.print("Z-Axis sensitivity adjustment value "); Serial.println(magCalibration[2], 2);
 		}
 		
-		delay(1000);
+		delay(100);
 
 		Serial.print("Probe BMP280: ");
 		if (bmp280.initialize()) Serial.println("Sensor found");
@@ -1059,30 +1058,35 @@ void MPU9265Class::update() {
 				Serial.print("rate = "); Serial.print((float)sumCount / sum, 2); Serial.println(" Hz");
 			}
 
-			//bmp280.awaitMeasurement();
-
 			if (bmp280.checkMeasurement() == 1) {
-				float temperature;
-				bmp280.getTemperature(temperature);
+				//float temperature;
+				//bmp280.getTemperature(temperature);
 
 				float pascal;
 				bmp280.getPressure(pascal);
 
-				static float meters, metersold;
+				static float meters, metersold, temperature;
 				bmp280.getAltitude(meters);
+				bmp280.getTemperature(temperature);
 				metersold = (metersold * 10 + meters) / 11;
 
 				bmp280.triggerMeasurement();
 
-				Serial.print(" HeightPT1: ");
-				Serial.print(metersold);
-				Serial.print(" m; Height: ");
-				Serial.print(meters);
-				Serial.print(" Pressure: ");
-				Serial.print(pascal);
-				Serial.print(" Pa; T: ");
-				Serial.print(temperature);
-				Serial.println(" C");
+				orientation.height = meters;
+				orientation.pressure = pascal;
+				orientation.temperature = temperature;
+
+				if (SerialDebug) {
+					Serial.print(" HeightPT1: ");
+					Serial.print(metersold);
+					Serial.print(" m; Height: ");
+					Serial.print(meters);
+					Serial.print(" Pressure: ");
+					Serial.print(pascal);
+					Serial.print("Temperature C");
+					Serial.print(temperature);
+					Serial.println("");
+				}
 			}
 
 			orientation.roll = roll;
