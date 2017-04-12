@@ -10,13 +10,16 @@
 #endif
 
 #include <SoftwareSerial.h>
+#include "MPU9265.h"
 
 class WifiControllerClass
 {
  protected:
 
  public:
-	void init();
+	Orientation *orientation;
+
+	void init(Orientation *orientation);
 	void update();
 };
 

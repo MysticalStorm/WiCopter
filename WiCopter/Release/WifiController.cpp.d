@@ -14,4 +14,5 @@ C:\Users\incro\AppData\Local\Temp\VMBuilds\WiCopter\nano_atmega328\Release\WifiC
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\variants\eightanaloginputs/pins_arduino.h \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\variants\eightanaloginputs/../standard/pins_arduino.h \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\libraries\SoftwareSerial\src/SoftwareSerial.h \
- C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino/Stream.h
+ C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino/Stream.h \
+ C:\Users\incro\AppData\Local\Temp\VMBuilds\WiCopter\nano_atmega328\Release\MPU9265.h

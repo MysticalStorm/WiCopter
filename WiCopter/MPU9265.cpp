@@ -865,7 +865,6 @@ void MahonyQuaternionUpdate(float ax, float ay, float az, float gx, float gy, fl
 
 void MPU9265Class::init() {
 	Wire.begin(); //A5 A4
-	orientation.height = 0.0;
 	// Set up the interrupt pin, its set as active high, push-pull
 	pinMode(intPin, INPUT);
 	digitalWrite(intPin, LOW);

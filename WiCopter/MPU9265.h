@@ -25,7 +25,7 @@ class MPU9265Class {
  public:
 	void init();
 	void update();
-	Orientation orientation;
+	Orientation orientation = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
 };
 
 #endif

@@ -15,6 +15,7 @@ C:\Users\incro\AppData\Local\Temp\VMBuilds\WiCopter\nano_atmega328\Release\WiCop
  C:\Users\incro\AppData\Local\Temp\VMBuilds\WiCopter\nano_atmega328\Release\WifiController.h \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\libraries\SoftwareSerial\src/SoftwareSerial.h \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino/Stream.h \
+ C:\Users\incro\AppData\Local\Temp\VMBuilds\WiCopter\nano_atmega328\Release\MPU9265.h \
  C:\Users\incro\AppData\Local\Temp\VMBuilds\WiCopter\nano_atmega328\Release\FlightStabilization.h \
  C:\Users\incro\AppData\Local\Temp\VMBuilds\WiCopter\nano_atmega328\Release\Motor.h \
  C:\Program\ Files\ (x86)\Arduino\libraries\Servo\src/Servo.h \

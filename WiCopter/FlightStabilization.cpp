@@ -8,26 +8,25 @@
 
 MPU9265Class MPU;
 WifiControllerClass Wifi;
-SoftwareSerial WifiSerial(A3, A2);
 
 void FlightStabilizationClass::init() {
 	MPU.init();
-	Wifi.init();
-	WifiSerial.begin(115200);
+	Wifi.init(&MPU.orientation);
 }
 
 void FlightStabilizationClass::update() {
 	MPU.update();
 	Wifi.update();
 
+	/*
 	//Serial.println(MPU.orientation.height);
 	int a = MPU.orientation.height * 100;
 
 	String str = String(a) + ";";
 	Serial.println(str);
-
+	delay(1000);
 	WifiSerial.flush();
-	delay(250);
+	//delay(250);
 	for (int i = 0; i < str.length(); i++)
 	WifiSerial.write(str[i]);
 
@@ -36,6 +35,7 @@ void FlightStabilizationClass::update() {
 		WifiSerial.readBytes(a, 5);
 		Serial.println(a);
 	}
+	*/
 }
 
 unsigned short int FlightStabilizationClass::speedForMotor(Motor motor) {
